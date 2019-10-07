@@ -3,22 +3,23 @@
   <head>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/jquery-3.4.1.js"></script>
     <script src="js/scripts.js"></script>
+   
     <title>The Pizza Masters</title>
   </head>
   <body>
     <div class="container-fluid">
-      <h1 class="text-center">Pizza Masters</h1>
+      <h1 class="text-center">Pizza Masters </h1>
       <nav class="navbar navbar-default">
         <p class="navbar-text pull-right">
-          <span id="home">Home</span> |  <span id="checkout">Checkout</span>
+          <span id="home">Home</span> |  <span> <a href = "order.html">Order Now</a></span>
         </p>
       </nav>
       <div id="ordering-panel">
         <div class="panel panel-warning">
           <div class="panel-heading">
-            <h1 class="text-center">Family Specials!</h1>
+            <h1 class="text-center">The Pizza Family Specials!</h1>
           </div>
           <div class="panel-body">
             <div class="row">
@@ -28,8 +29,8 @@
                     <img src="img/easy-vegan-pizza-crust-baked.jpg" alt="Vegan Pizza Special" class="img-circle center-block">
                   </div>
                   <div class="panel-footer">
-                    <h1 class="text-center">Vegan  Large KES.700.00!</h1>
-                    <button type="click" class="btn-warning pull-right" id="special-vegan">Add to Order</button>
+                    <h1 class="text-center">Vegan Large KES.700.00!</h1>
+                    <button type="click" class="btn-warning pull-right" id="special-vegan" onclick="location.href='order.html'">Order Now</button>
                   </div>
                 </div>
               </div>
@@ -41,7 +42,7 @@
                   <div class="panel-footer">
                     <h1 class="text-center">Beef Large for Only KES.700.00!</h1>
                       
-                      <button type="click" class="btn-warning pull-right" id="special-meat">Order Now</button>
+                      <button type="click" class="btn-warning pull-right" id="special-meat" onclick="location.href='order.html'">Order Now</button>
                   </div>
                 </div>
               </div>
@@ -51,8 +52,8 @@
                     <img src="img/veggie.jpg" alt="Veggie Pizza Special" class="img-circle center-block">
                   </div>
                   <div class="panel-footer">
-                    <h1 class="text-center">Veggie Lovers Pizza for KES.700.00!</h1>
-                      <button type="click" class="btn-warning pull-right" id="special-veggie">Add to Order</button>
+                    <h1 class="text-center">Veggie Lovers for KES.700.00!</h1>
+                      <button type="click" class="btn-warning pull-right" id="special-veggie" onclick="location.href='order.html'">Order Now</button>
                   </div>
                 </div>
               </div>
@@ -64,6 +65,7 @@
           <div class="panel-heading">
             <h1 class="text-center">Menu</h1>
           </div>
+          <form id="pizza-form">
           <div class="panel-body">
             <div class="row">
               <div class="col-md-4">
@@ -73,12 +75,7 @@
                   </div>
                   <div class="panel-footer">
                     <h1 class="text-center">Hawiian</h1>
-                    <select class="form-control" id="size">
-                          <option hidden disabled selected value> -- select an option -- </option>
-                          <option value="large-hawwian">Large (KES1000.00)</option>
-                          <option value="medium-hawwian">Medium  (KES800.00)</option>
-                          <option value="small-hawwian">Small (KES550.00)</option>
-                    </select>
+                 <h1 class="text-center"><a href = "order.html">ORDER NOW</a></h1>
                   </div>
                 </div>
               </div>
@@ -89,12 +86,7 @@
                   </div>
                   <div class="panel-footer">
                     <h1 class="text-center">Veg Tikka</h1>
-                    <select class="form-control" id="size">
-                          <option hidden disabled selected value> -- select an option -- </option>
-                          <option value="large-vegtikka">Large  (KES800.00)</option>
-                          <option value="medium-vegtikka">Medium  (KES700.00)</option>
-                          <option value="small-vegtikka">Small (KES500.00)</option>
-                    </select>
+                  <h1 class="text-center"><a href = "order.html">ORDER NOW</a></h1>
                   </div>
                 </div>
               </div>
@@ -105,12 +97,7 @@
                   </div>
                   <div class="panel-footer">
                     <h1 class="text-center">Peri-Peri Chicken</h1>
-                      <select class="form-control" id="size">
-                          <option hidden disabled selected value> -- select an option -- </option>
-                          <option value="large-perichick">Large  (KES1000.00)</option>
-                          <option value="medium-perichick">Medium  (KES800.00)</option>
-                          <option value="small-perichick">Small (KES550.00)</option>
-                    </select>
+                    <h1 class="text-center"><a href = "order.html">ORDER NOW</a></h1>
                   </div>
                 </div>
               </div>
@@ -124,12 +111,7 @@
                   </div>
                   <div class="panel-footer">
                     <h1 class="text-center">Americano</h1>
-                    <select class="form-control" id="size">
-                          <option hidden disabled selected value> -- select an option -- </option><option value="select">Select</option>
-                          <option value="large-americana">Large (KES1000.00)</option>
-                          <option value="medium-americana">Medium  (KES800.00)</option>
-                          <option value="small-americana">Small (KES550.00)</option>
-                    </select>
+                   <h1 class="text-center"><a href = "order.html">ORDER NOW</a></h1>
                   </div>
                 </div>
               </div>
@@ -140,12 +122,7 @@
                   </div>
                   <div class="panel-footer">
                     <h1 class="text-center">Chicken Macon BBQ</h1>
-                    <select class="form-control" id="size">
-                          <option hidden disabled selected value> -- select an option -- </option>
-                          <option value="large-bbq">Large  (KES1000.00)</option>
-                          <option value="medium-bbq">Medium  (KES800.00)</option>
-                          <option value="small-bbq">Small (KES550.00)</option>
-                    </select>
+                  <h1 class="text-center"><a href = "order.html">ORDER NOW</a></h1>
                   </div>
                 </div>
               </div>
@@ -156,83 +133,14 @@
                   </div>
                   <div class="panel-footer">
                     <h1 class="text-center">Chicken & Mushroom</h1>
-                      <select class="form-control" id="size">
-                          <option hidden disabled selected value> -- select an option -- </option>
-                          <option value="large-cm">Large  (KES1100.00)</option>
-                          <option value="medium-cm">Medium  (KES880.00)</option>
-                          <option value="small-cm">Small (KES590.00)</option>
-                    </select>
+                    <h1 class="text-center"><a href = "order.html">ORDER NOW</a></h1>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="panel panel-warning">
-          <div class="panel-heading">
-            <h1>Place an Order</h1>
-          </div>
-          <div class="panel-body">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="panel panel-warning">
-                  <div class="panel-body">
-                    <form id="pizza-form">
-                      <div class="form-group">
-                        <label for "size">what kind of crust would you like your pizza to have?</label>
-                        <select class="form-control" id="size">
-                          <option value="Crispy">Crispy</option>
-                          <option value="Stuffed">Stuffed</option>
-                          <option value="Gluten-free">Gluten-free</option>
-                        </select>
-                      </div>
-                      <div class="form-group">
-                        <p><strong>What toppings would you like?</strong> <em>(KES100.00 per Topping)</em></p>
-                        <div class="row">
-                          <div class="col-sm-4">
-                            <input type="checkbox" name="toppings" value="Extra Vegetable"> Extra Vegetable<br>
-                            <input type="checkbox" name="toppings" value="mushroom"> Mushroom<br>
-                            <input type="checkbox" name="toppings" value="artichoke"> Artichoke<br>
-                            <input type="checkbox" name="toppings" value="anchovy"> Anchovy
-                          </div>
-                          <div class="col-sm-4">
-                            <input type="checkbox" name="toppings" value="pineapple"> Pineapple<br>
-                            <input type="checkbox" name="toppings" value="green-peppers"> Green Peppers<br>
-                            <input type="checkbox" name="toppings" value="onions"> Onions<br>
-                            <input type="checkbox" name="toppings" value="sausage"> Sausage
-                          </div>
-                          <div class="col-sm-4">
-                            <input type="checkbox" name="toppings" value="black-olives"> Black Olives<br>
-                            <input type="checkbox" name="toppings" value="canadian-beef"> Canadian Beef<br>
-                            <input type="checkbox" name="toppings" value="feta"> Feta Cheese<br>
-                            <input type="checkbox" name="toppings" value="extra-cheese"> Extra Cheese
-                          </div>
-                        </div>
-                      </div>
-                      <button type="submit" class="pull-right btn-warning" id="add-button">Add to Order</button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="panel panel-warning">
-                  <div class="panel-heading">
-                    <h2 class="panel-title">Your Order Summary</h2>
-                  </div>
-                  <div class="panel-body">
-                    <div class="pizza-summaries">
-                    </div>
-                  </div>
-                  <div class="panel-footer">
-                    <button type="click" class="btn-warning pull-right" id="purchase-button">Purchase</button>
-                    <h2>Your Total: <span class="total-price"></span></h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+        
     </div>
   </div>
 </body>
