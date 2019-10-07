@@ -10,6 +10,9 @@ $(document).ready(function() {
     var crust = document.querySelector('input[name="selectedCrust"]:checked');
     var sauce = document.querySelector('input[name="selectedSauce"]:checked');
     var cheese = document.querySelector('input[name="selectedCheese"]:checked');
+    var delivery = document.querySelector(
+      'input[name="selectedDelivery"]:checked'
+    );
 
     // get values of checked checkboxes (an array). Display an error if nothing was selected.
     var meat = $('#meatSelection input')
@@ -53,6 +56,13 @@ $(document).ready(function() {
       }
       errorMsg = errorMsg + ' cheese';
       document.getElementById('cheeseBtn').style.color = '#c4122f';
+    }
+    if (isEmpty(delivery)) {
+      if (errorMsg !== null && errorMsg !== '') {
+        errorMsg = errorMsg + ',';
+      }
+      errorMsg = errorMsg + ' delivery';
+      document.getElementById('deliveryBtn').style.color = '#c4122f';
     }
 
     // construct final error message
@@ -106,6 +116,14 @@ $(document).ready(function() {
           price: 0
         }
       ];
+      var arrayDelivery = [
+        {
+          price: 0
+        },
+        {
+          price: 200
+        }
+      ];
 
       // get selected item names and prices
       // -- from radio button groups
@@ -124,6 +142,10 @@ $(document).ready(function() {
       var cheeseName = cheese.nextElementSibling.innerHTML;
       var cheesePrice = arrayCheese[cheese.value].price;
       console.log(cheeseName + ' KES' + cheesePrice);
+
+      var deliveryName = delivery.nextElementSibling.innerHTML;
+      var deliveryPrice = arrayDelivery[delivery.value].price;
+      console.log(deliveryName + ' KES' + deliveryPrice);
 
       // -- from checkbox groups
       var meatName = meat.join(', ');
@@ -147,7 +169,8 @@ $(document).ready(function() {
         saucePrice +
         cheesePrice +
         meatPrice +
-        veggiePrice;
+        veggiePrice +
+        deliveryPrice;
       console.log('Total = KES' + total);
 
       // put items and prices into the total form
